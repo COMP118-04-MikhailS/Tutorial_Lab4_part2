@@ -16,7 +16,7 @@
 using namespace std;
 
 /**
-* Function <code>main </code> 
+* Function <code>main</code> prints the menu with all the choices and calls the functions based on user input.
 * <BR>
 * @return Returns 0 if everything is ok and something else in other case
 */
@@ -62,7 +62,7 @@ int main() {
 				} while (row < 0 || row >= maxRow);
 
 				sum = sumOfRow(mat, row, maxRow);
-				cout << "Sum of row " << row << " is: " << sum << endl;
+				cout << "Sum of row " << row << " is: " << sum << "\n";
 				break;
 			case 4:
 				do {
@@ -74,18 +74,38 @@ int main() {
 				} while (column < 0 || column >= MAX_COL);
 
 				sum = sumOfCol(mat, column, maxRow);
-				cout << "Sum of column " << column << " is: " << sum << endl;
+				cout << "Sum of column " << column << " is: " << sum << "\n";
 				break;
 
 			case 5:
+				do {
+					cout << "Enter row number ( 0 - " << maxRow - 1 << "): ";
+					cin >> row;
+					if (row < 0 || row >= maxRow) {
+						cout << "Invalid row number. Please try again.\n";
+					}
+				} while (row < 0 || row >= maxRow);
+				max = maxOfRow(mat, row, maxRow);
+				cout << "Max of row " << row << " is: " << max << "\n";
 				break;
 
 			case 6:
+				do {
+					cout << "Enter column number ( 0 - " << MAX_COL - 1 << "): ";
+					cin >> column;
+					if (column < 0 || column >= MAX_COL) {
+						cout << "Invalid column number. Please try again.\n";
+					}
+				} while (column < 0 || column >= MAX_COL);
+				max = maxOfCol(mat, column, maxRow);
+				cout << "Max of column " << column << " is: " << max << "\n";
 				break;
 
 			case 7:
+				avg = avgOfMatrix(mat, maxRow);
+				cout << "Average of matrix is : " << avg << endl;
 				break;
-
+					
 			case 8:
 				break;
 

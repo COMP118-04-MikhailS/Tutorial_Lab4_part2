@@ -80,12 +80,14 @@ void fillWithRandomNum(double mat[][MAX_COL], const int maxRow) {
 void printMatrix(const double mat[][MAX_COL], const int maxRow) {
 	assert(MAX_COL > 1 && maxRow > 1);
 
+	cout << "Matrix: " << endl;
 	for (int i = 0; i < maxRow; i++) {
 		for (int k = 0; k < MAX_COL; k++) {
 			cout << mat[i][k] << " ";
 		}
 		cout << endl;
 	}
+	cout << endl;
 }
 /**
 * Function <code>maxOfCol</code> calculates and returns the maximum of the specific column.

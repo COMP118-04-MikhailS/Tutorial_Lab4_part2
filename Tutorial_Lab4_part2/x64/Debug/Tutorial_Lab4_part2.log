@@ -1,5 +1,1 @@
-﻿  main.cpp
-C:\Users\Sokol\Documents LOCAL\YNIVER\CPP_programms\Tutorial_Lab4_part2\Tutorial_Lab4_part2\main.cpp(25,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\Sokol\Documents LOCAL\YNIVER\CPP_programms\Tutorial_Lab4_part2\Tutorial_Lab4_part2\main.cpp(32,14): warning C4101: 'max': unreferenced local variable
-C:\Users\Sokol\Documents LOCAL\YNIVER\CPP_programms\Tutorial_Lab4_part2\Tutorial_Lab4_part2\main.cpp(32,19): warning C4101: 'avg': unreferenced local variable
-  Tutorial_Lab4_part2.vcxproj -> C:\Users\Sokol\Documents LOCAL\YNIVER\CPP_programms\Tutorial_Lab4_part2\x64\Debug\Tutorial_Lab4_part2.exe
+﻿  Tutorial_Lab4_part2.vcxproj -> C:\Users\Sokol\Documents LOCAL\YNIVER\CPP_programms\Tutorial_Lab4_part2\x64\Debug\Tutorial_Lab4_part2.exe
