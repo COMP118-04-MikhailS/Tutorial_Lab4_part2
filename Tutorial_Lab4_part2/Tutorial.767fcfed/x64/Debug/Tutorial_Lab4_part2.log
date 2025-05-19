@@ -1,0 +1,6 @@
+﻿  Matrix.cpp
+  main.cpp
+C:\Users\Sokol\Documents LOCAL\YNIVER\CPP_programms\Tutorial_Lab4_part2\Tutorial_Lab4_part2\main.cpp(25,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Sokol\Documents LOCAL\YNIVER\CPP_programms\Tutorial_Lab4_part2\Tutorial_Lab4_part2\main.cpp(29,9): warning C4101: 'result': unreferenced local variable
+  Generating Code...
+LINK : fatal error LNK1168: cannot open C:\Users\Sokol\Documents LOCAL\YNIVER\CPP_programms\Tutorial_Lab4_part2\Tutorial_Lab4_part2\x64\Debug\Tutorial_Lab4_part2.exe for writing

@@ -9,7 +9,7 @@
 
 #include <iostream>
 #include "Matrix.h"
-#include <cassert>
+#include <cassert>	
 
 using namespace std;
 
@@ -53,10 +53,23 @@ double sumOfCol(const double mat[][MAX_COL], const int column, const int maxRow)
 	return colSum;
 }
 
-
+/**
+* Function <code>fillWithRandomNum</code> takes an 2D array and fills it with random numbers from 1-10.
+* <BR>
+* @param mat Is the 2D array with all the numbers
+* @param maxRow Is the maximum amount of rows
+*/
 void fillWithRandomNum(double mat[][MAX_COL], const int maxRow) {
+	assert(MAX_COL > 1 && maxRow > 1);
 
+	for (int i = 0; i < maxRow; i++) {
+		for (int k = 0; k < MAX_COL; k++) {
+			mat[i][k] = rand() % 10 + 1;
+		}
+		cout << endl;
+	}
 }
+
 
 /**
 * Function <code>printMatrix</code> Prints the matrix.

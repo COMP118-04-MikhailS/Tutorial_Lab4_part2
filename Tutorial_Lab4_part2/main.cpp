@@ -10,15 +10,25 @@
 #include "Matrix.h"
 #include <iostream>
 #include <cassert>
+#include <ctime>
+#include <cstdlib>
 
 using namespace std;
 
 /**
 * Function <code>main </code> 
 * <BR>
-* @param length The length of the line
-* @return 1 if 
+* @return Returns 0 if everything is ok and something else in other case
 */
 int main() {
 
+	srand(time(0));
+
+	double testArr[2][MAX_COL] = { {1.0, 2.0, 3.0}, {4.0, 5.0, 6.0} };
+
+	printMatrix(testArr, 2);
+	fillWithRandomNum(testArr, 2);
+	printMatrix(testArr, 2);
+
+	return 0;
 }
