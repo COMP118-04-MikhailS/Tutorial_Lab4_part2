@@ -23,10 +23,10 @@ using namespace std;
 * @return rowSum Is the sum of all elements in row specified by user	
 */
 double sumOfRow(const double mat[][MAX_COL], const int row, const int maxRow) {
-	assert(MAX_COL > 1);
+	assert(row >= 0 && MAX_COL > 0);
 	double rowSum = 0;
 
-	for (int i = 0; i < maxRow; i++) {
+	for (int i = 0; i < MAX_COL; i++) {
 		rowSum += mat[row][i];
 	}
 
@@ -42,9 +42,11 @@ double sumOfRow(const double mat[][MAX_COL], const int row, const int maxRow) {
 * @return colSum Is the sum of all elements in column specified by user
 */
 double sumOfCol(const double mat[][MAX_COL], const int column, const int maxRow) {
+	assert(column >= 0 && maxRow > 0);
+
 	double colSum = 0; 
 	
-	for (int i = 0; i < MAX_COL; i++) {
+	for (int i = 0; i < maxRow; i++) {
 		colSum += mat[i][column];
 	}
 
@@ -63,6 +65,8 @@ void fillWithRandomNum(double mat[][MAX_COL], const int maxRow) {
 * @param maxRow Is the maximum amount of rows
 */
 void printMatrix(const double mat[][MAX_COL], const int maxRow) {
+	assert(MAX_COL > 1 && maxRow > 1);
+
 	for (int i = 0; i < maxRow; i++) {
 		for (int k = 0; k < MAX_COL; k++) {
 			cout << mat[i][k] << " ";
