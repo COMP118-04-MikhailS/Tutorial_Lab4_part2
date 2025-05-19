@@ -15,6 +15,9 @@
 
 using namespace std;
 
+//Function prototype
+void showMenu();
+
 /**
 * Function <code>main</code> prints the menu with all the choices and calls the functions based on user input.
 * <BR>
@@ -24,7 +27,7 @@ int main() {
 
 	srand(time(0));
 
-	double mat[2][MAX_COL] = { { 1, 2, 3 }, { 4, 5, 6 } };
+	double mat[2][MAX_COL] = { {0} };
 
 	int maxRow = 2;
 	
@@ -32,17 +35,7 @@ int main() {
 	double sum, max, avg;
 
 	do {
-		cout << "1. Fill with random numbers\n";
-		cout << "2. Print matrix\n";
-		cout << "3. Sum of row\n";
-		cout << "4. Sum of column\n";
-		cout << "5. Max of row\n";
-		cout << "6. Max of column\n";
-		cout << "7. Average of matrix\n";
-		cout << "8. Exit\n";
-
-		cout << "Enter your choice: ";
-
+		showMenu();
 		cin >> choice;
 		switch (choice) {
 			case 1:
@@ -105,15 +98,31 @@ int main() {
 				avg = avgOfMatrix(mat, maxRow);
 				cout << "Average of matrix is : " << avg << endl;
 				break;
-					
-			case 8:
+			// Exit case
+			case 0:
 				break;
 
 			default:
 				cout << "Invalid choice. Please try again.\n";
 				break;
 		}
-	} while (choice != 8);
+	} while (choice != 0);
 
 	return 0;
+}
+
+/**
+ * The <code>showMenu</code> function displays the menu options to the user.
+ */
+void showMenu() {
+	cout << "\n1. Fill with random numbers\n";
+	cout << "2. Print matrix\n";
+	cout << "3. Sum of row\n";
+	cout << "4. Sum of column\n";
+	cout << "5. Max of row\n";
+	cout << "6. Max of column\n";
+	cout << "7. Average of matrix\n";
+	cout << "0. Exit\n";
+
+	cout << "Enter your choice: ";
 }

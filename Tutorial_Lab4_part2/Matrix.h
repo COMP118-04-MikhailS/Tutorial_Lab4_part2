@@ -9,7 +9,8 @@
 #ifndef MATRIX_h
 #define MATRIX_h
 
-const int MAX_COL = 3;
+// Global constant
+const int MAX_COL = 5;
 
 //Function prototypes
 
@@ -21,5 +22,10 @@ void printMatrix(const double mat[][MAX_COL], const int maxRow);
 double maxOfCol(const double mat[][MAX_COL], const int column, const int maxRow);
 double maxOfRow(const double mat[][MAX_COL], const int row, const int maxRow);
 double avgOfMatrix(const double mat[][MAX_COL], const int maxRow);
+
+
+bool isIdentityMatrix(const double mat[][MAX_COL], const int maxRow);
+bool makeIdentityMatrix(double mat[][MAX_COL], const int maxRow);
+double sumOfDiagonal(const double mat[][MAX_COL], const int maxRow);
 
 #endif
