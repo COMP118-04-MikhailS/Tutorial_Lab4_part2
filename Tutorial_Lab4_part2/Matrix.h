@@ -9,7 +9,7 @@
 #ifndef MATRIX_h
 #define MATRIX_h
 
-const int MAX_COL = 
+const int MAX_COL = 3;
 
 //Function prototypes
 double sumOfRow(const double mat[][MAX_COL], const int row, const int maxRow);
