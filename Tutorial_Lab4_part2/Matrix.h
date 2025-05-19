@@ -10,7 +10,7 @@
 #define MATRIX_h
 
 // Global constant
-const int MAX_COL = 5;
+const int MAX_COL = 3;
 
 //Function prototypes
 

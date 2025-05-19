@@ -27,9 +27,10 @@ int main() {
 
 	srand(time(0));
 
-	double mat[2][MAX_COL] = { {0} };
+	const int MaxRow = 2;
 
-	int maxRow = 2;
+	double mat[MaxRow][MAX_COL] = {0};
+
 	
 	int choice, row, column;
 	double sum, max, avg;
@@ -39,22 +40,22 @@ int main() {
 		cin >> choice;
 		switch (choice) {
 			case 1:
-				fillWithRandomNum(mat, 2);
+				fillWithRandomNum(mat, MaxRow);
 				cout << "Matrix filled with random numbers.\n";
 				break;
 			case 2:
-				printMatrix(mat, 2);
+				printMatrix(mat, MaxRow);
 				break;
 			case 3:
 				do {
-					cout << "Enter row number ( 0 - " << maxRow - 1 << "): ";
+					cout << "Enter row number ( 0 - " << MaxRow - 1 << "): ";
 					cin >> row;
-					if (row < 0 || row >= maxRow) {
+					if (row < 0 || row >= MaxRow) {
 						cout << "Invalid row number. Please try again.\n";
 					}
-				} while (row < 0 || row >= maxRow);
+				} while (row < 0 || row >= MaxRow);
 
-				sum = sumOfRow(mat, row, maxRow);
+				sum = sumOfRow(mat, row, MaxRow);
 				cout << "Sum of row " << row << " is: " << sum << "\n";
 				break;
 			case 4:
@@ -66,19 +67,19 @@ int main() {
 					}
 				} while (column < 0 || column >= MAX_COL);
 
-				sum = sumOfCol(mat, column, maxRow);
+				sum = sumOfCol(mat, column, MaxRow);
 				cout << "Sum of column " << column << " is: " << sum << "\n";
 				break;
 
 			case 5:
 				do {
-					cout << "Enter row number ( 0 - " << maxRow - 1 << "): ";
+					cout << "Enter row number ( 0 - " << MaxRow - 1 << "): ";
 					cin >> row;
-					if (row < 0 || row >= maxRow) {
+					if (row < 0 || row >= MaxRow) {
 						cout << "Invalid row number. Please try again.\n";
 					}
-				} while (row < 0 || row >= maxRow);
-				max = maxOfRow(mat, row, maxRow);
+				} while (row < 0 || row >= MaxRow);
+				max = maxOfRow(mat, row, MaxRow);
 				cout << "Max of row " << row << " is: " << max << "\n";
 				break;
 
@@ -90,13 +91,29 @@ int main() {
 						cout << "Invalid column number. Please try again.\n";
 					}
 				} while (column < 0 || column >= MAX_COL);
-				max = maxOfCol(mat, column, maxRow);
+				max = maxOfCol(mat, column, MaxRow);
 				cout << "Max of column " << column << " is: " << max << "\n";
 				break;
 
 			case 7:
-				avg = avgOfMatrix(mat, maxRow);
+				avg = avgOfMatrix(mat, MaxRow);
 				cout << "Average of matrix is : " << avg << endl;
+				break;
+
+			case 8:
+				if (!makeIdentityMatrix(mat, MaxRow))
+					cerr << "\nNot a square matrix, cannot apply function";
+				break;
+
+			case 9:
+				if (isIdentityMatrix(mat, MaxRow))
+					cout << "\nMatrix is an identity matrix";
+				else
+					cout << "\nMatrix is NOT an identity matrix";
+				break;
+
+			case 10:
+				cout << "\nSum of diagonal is: " << sumOfDiagonal(mat, MaxRow);
 				break;
 			// Exit case
 			case 0:
@@ -122,6 +139,9 @@ void showMenu() {
 	cout << "5. Max of row\n";
 	cout << "6. Max of column\n";
 	cout << "7. Average of matrix\n";
+	cout << "8. Make Identity Matrix\n";
+	cout << "9. Test if Identity Matrix\n";
+	cout << "10. Sum of Diagonal\n";
 	cout << "0. Exit\n";
 
 	cout << "Enter your choice: ";
