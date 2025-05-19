@@ -26,9 +26,74 @@ int main() {
 
 	double mat[2][MAX_COL] = { { 1, 2, 3 }, { 4, 5, 6 } };
 
-	cout << maxOfCol(mat, 1, 2) << endl;
-	cout << maxOfRow(mat, 0, 2) << endl;
-	cout << avgOfMatrix(mat, 2) << endl;
+	int maxRow = 2;
+	
+	int choice, row, column;
+	double sum, max, avg;
+
+	do {
+		cout << "1. Fill with random numbers\n";
+		cout << "2. Print matrix\n";
+		cout << "3. Sum of row\n";
+		cout << "4. Sum of column\n";
+		cout << "5. Max of row\n";
+		cout << "6. Max of column\n";
+		cout << "7. Average of matrix\n";
+		cout << "8. Exit\n";
+
+		cout << "Enter your choice: ";
+
+		cin >> choice;
+		switch (choice) {
+			case 1:
+				fillWithRandomNum(mat, 2);
+				cout << "Matrix filled with random numbers.\n";
+				break;
+			case 2:
+				printMatrix(mat, 2);
+				break;
+			case 3:
+				do {
+					cout << "Enter row number ( 0 - " << maxRow - 1 << "): ";
+					cin >> row;
+					if (row < 0 || row >= maxRow) {
+						cout << "Invalid row number. Please try again.\n";
+					}
+				} while (row < 0 || row >= maxRow);
+
+				sum = sumOfRow(mat, row, maxRow);
+				cout << "Sum of row " << row << " is: " << sum << endl;
+				break;
+			case 4:
+				do {
+					cout << "Enter column number ( 0 - " << MAX_COL - 1 << "): ";
+					cin >> column;
+					if (column < 0 || column >= MAX_COL) {
+						cout << "Invalid column number. Please try again.\n";
+					}
+				} while (column < 0 || column >= MAX_COL);
+
+				sum = sumOfCol(mat, column, maxRow);
+				cout << "Sum of column " << column << " is: " << sum << endl;
+				break;
+
+			case 5:
+				break;
+
+			case 6:
+				break;
+
+			case 7:
+				break;
+
+			case 8:
+				break;
+
+			default:
+				cout << "Invalid choice. Please try again.\n";
+				break;
+		}
+	} while (choice != 8);
 
 	return 0;
 }
