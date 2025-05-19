@@ -24,11 +24,11 @@ int main() {
 
 	srand(time(0));
 
-	double testArr[2][MAX_COL] = { {1.0, 2.0, 3.0}, {4.0, 5.0, 6.0} };
+	double mat[2][MAX_COL] = { { 1, 2, 3 }, { 4, 5, 6 } };
 
-	printMatrix(testArr, 2);
-	fillWithRandomNum(testArr, 2);
-	printMatrix(testArr, 2);
+	cout << maxOfCol(mat, 1, 2) << endl;
+	cout << maxOfRow(mat, 0, 2) << endl;
+	cout << avgOfMatrix(mat, 2) << endl;
 
 	return 0;
 }

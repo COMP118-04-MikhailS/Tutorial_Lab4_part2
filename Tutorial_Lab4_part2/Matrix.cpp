@@ -87,3 +87,72 @@ void printMatrix(const double mat[][MAX_COL], const int maxRow) {
 		cout << endl;
 	}
 }
+/**
+* Function <code>maxOfCol</code> calculates and returns the maximum of the specific column.
+* <BR>
+* @param mat Is the 2D array with all the numbers
+* @param column Is the column number of which we need to find the maximum
+* @param maxRow Is the maximum amount of rows	
+* @return maxCol Is the maximum of all elements in column specified by user
+*/
+double maxOfCol(const double mat[][MAX_COL], const int column, const int maxRow) {
+	assert(column >= 0 && maxRow > 0);
+
+	double maxCol = mat[0][column];
+
+	for (int i = 1; i < maxRow; i++) {
+		if (mat[i][column] > maxCol) {
+			maxCol = mat[i][column];
+		}
+	}
+
+	return maxCol;
+}
+
+/**
+* Function <code>maxOfRow</code> calculates and returns the maximum of the specific row.
+* <BR>
+* @param mat Is the 2D array with all the numbers
+* @param row Is the row number of which we need to find the maximum
+* @param maxRow Is the maximum amount of rows
+* @return maxRow Is the maximum of all elements in row specified by user
+*/
+double maxOfRow(const double mat[][MAX_COL], const int row, const int maxRow) {
+	assert(row >= 0 && MAX_COL > 0);
+	double rowMax = mat[row][0];
+
+	for (int i = 1; i < MAX_COL; i++) {
+		if (mat[row][i] > rowMax) {
+			rowMax = mat[row][i];
+		}
+	}
+
+	return rowMax;
+}
+
+/**
+* Functoin <code>avgOfMatrix</code> calculates and returns the average of all elements in the matrix.
+* <BR>
+* @param mat Is the 2D array with all the numbers
+* @param maxRow Is the maximum amount of rows
+* @return avgMatrix Is the average of all elements in the matrix
+*/
+double avgOfMatrix(const double mat[][MAX_COL], const int maxRow) {
+	assert(MAX_COL > 1 && maxRow > 1);
+
+	double sum = 0;
+	int count = 0;
+
+	double avgMatrix;
+
+	for (int i = 0; i < maxRow; i++) {
+		for (int k = 0; k < MAX_COL; k++) {
+			sum += mat[i][k];
+			count++;
+		}
+	}
+	
+	avgMatrix = sum / count;
+
+	return avgMatrix;
+}
