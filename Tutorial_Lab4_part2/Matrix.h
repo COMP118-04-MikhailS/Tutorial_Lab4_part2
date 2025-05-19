@@ -1,0 +1,20 @@
+/** \file Shapes.h
+* \brief Library to draw various matrixes.
+* \details
+* \author Mikhail
+* \version 0.1
+* \date 05/2025
+* \copyright University of Nicosia.
+*/
+#ifndef MATRIX_h
+#define MATRIX_h
+
+const int MAX_COL = 
+
+//Function prototypes
+double sumOfRow(const double mat[][MAX_COL], const int row, const int maxRow);
+double sumOfCol(const double mat[][MAX_COL], const int column, const int maxRow);
+void fillWithRandomNum(double mat[][MAX_COL], const int maxRow);
+void printMatrix(const double mat[][MAX_COL], const int maxRow);
+
+#endif MATRIX_h
