@@ -4,10 +4,7 @@
 * \author Mikhail
 * \version 0.1
 * \date 05/2025
-* \bug	Logical bugs in the following functions: 
-*	1) isIdentityMatrix
-*	2) makeIdentityMatrix
-*	3) sumOfDiagonal
+* \bug	no bugs
 * \copyright University of Nicosia.
 */
 
