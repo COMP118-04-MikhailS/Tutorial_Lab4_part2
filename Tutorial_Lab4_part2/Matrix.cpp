@@ -219,7 +219,7 @@ bool makeIdentityMatrix(double mat[][MAX_COL], const int maxRow) {
  * @return Returns sum of diagonal, <code>-1</code> if this is not a square matrix.
  */
 double sumOfDiagonal(const double mat[][MAX_COL], const int maxRow) {
-	double sum = 1;
+	double sum = 0;
 
 	if (MAX_COL != maxRow)
 		return -1; // Identity matrix must be a square matrix
