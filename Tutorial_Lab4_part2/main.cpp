@@ -1,4 +1,4 @@
-/** \file Tutorial4Part1.cpp
+/** \file main.cpp
 * \brief Prints different shapes with given dimensions.
 * \details
 * \author Mikhail

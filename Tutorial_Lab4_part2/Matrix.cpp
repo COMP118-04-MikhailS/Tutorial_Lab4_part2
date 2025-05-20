@@ -1,4 +1,4 @@
-/** \file Shapes.cpp
+/** \file Matrix.cpp
 * \brief The file that contains all the functions code.
 * \details
 * \author Mikhail

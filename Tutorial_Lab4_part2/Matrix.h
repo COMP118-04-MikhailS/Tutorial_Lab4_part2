@@ -1,4 +1,4 @@
-/** \file Shapes.h
+/** \file Matrix.h
 * \brief Library to draw various matrixes.
 * \details
 * \author Mikhail
