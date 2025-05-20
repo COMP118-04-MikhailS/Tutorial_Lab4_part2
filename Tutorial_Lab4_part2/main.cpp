@@ -27,7 +27,7 @@ int main() {
 
 	srand(time(0));
 
-	const int MaxRow = 2;
+	const int MaxRow = 3;
 
 	double mat[MaxRow][MAX_COL] = {0};
 
